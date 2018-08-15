@@ -1,0 +1,183 @@
+   <html>
+<head>
+<title>WorkOut Buddy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"
+    />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    
+    
+    <link rel='stylesheet', href='/stylesheets/style.css'>
+    
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+    
+    
+<script type="text/javascript">
+    
+      $(document).ready(function () {
+            $("body").css("background", "#48ADF0");
+            $("#logout").css({"background": "light grey", "align":"right"});
+        });
+    
+        $(function () {
+            $(document).tooltip({
+                tooltipClass: "uitooltip",
+                position: {
+                    my: "left bottom",
+                    at: "right+3 top"
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("body").css("background", "#48ADF0");
+        });
+
+        $(function () {
+
+
+            $('#dragme').draggable({
+                scroll: true,
+                revert: "invalid"
+
+            });
+            //droppable
+            $('#droppable').droppable({
+                accept: '#dragme',
+                drop: function () {
+
+                    // $(this).find('span').html("drop the box");
+
+                    $(this).text("");
+                }
+
+            });
+            /*$(".reset").click(function() {
+                $("#dragme").css({
+                    'left': $("#dragme").data('originalLeft'),
+                    'top': $("#dragme").data('origionalTop')
+                });*/
+        });
+        $(init);
+
+        function init() {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+
+        }
+
+        $('textarea').autoResize();
+    </script>
+</head>
+
+<body class="w3-theme-l5" style="z-index: -1">
+
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="/Profile.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="/Profile.html/#maps" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Location"><i class="fa fa-globe"></i></a>
+  <a href="/updateform" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="/searchreq" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Search"><i class="fa fa-search"></i></a>
+  <a href="/deleteform.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="delete account"><i class="fa fa-trash"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+    </div>
+  </div>
+  <a href="/logout" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Logout"><img src="/images/avatar2.png" class="w3-circle" style="height:25px;width:25px" alt="Logout"></a>
+ </div>
+</div>
+    
+    
+    
+    <!-- Right Column -->
+    <div class="w3-col m2" style="position:fixed !important; left: 82%; right: 0%;" >
+    
+        <c><h3>&nbsp&nbsp&nbsp Sponsored Ads</h3></c>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center"  >
+        <div class="w3-container">
+            
+            <br>
+             <iframe src="https://giphy.com/embed/AtNI6TyqteU0" width="150" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://www.sjsu.edu/studentunion/recreation/">Spartan Up!</a></p>
+            
+            
+          
+          
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+          
+          
+           
+        <div class="tenor-gif-embed" data-postid="5593845" data-share-method="host" data-width="100%" data-aspect-ratio="1.509090909090909">
+        <a href="https://tenor.com/view/healthy-food-gif-5593845">Healthy GIF</a> from <a href="https://tenor.com/search/healthy-gifs">Healthy GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+          <br>
+          
+          
+        <div id="maps" name="maps">
+            
+             <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+            </style>
+            <h3>Location</h3>
+            <div id="map"></div>
+            <script>
+      function initMap() {
+          
+        var options = {lat: 37.3382, lng: -121.8863};
+          
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: options
+        });
+          
+        var marker = new google.maps.Marker({
+          position: options,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNYd6qybMzwTniFEOFJj66el1lub91olE&callback=initMap">
+    </script>
+        </div>
+        
+        
+      
+     
+        
+      </div>
+      <br>
+      
+     
+      
+    <!-- End Right Column -->
+    </div>
+       </body></html>

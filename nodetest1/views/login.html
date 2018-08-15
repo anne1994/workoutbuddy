@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- Adding a title to the current page -->
+    <title>WorkOut Buddy - Log In or Sign Up</title>
+
+    <!-- adding a CSS external style sheet to the HTML page -->
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" />
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" type="text/css"
+        media="all">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
+
+    <!-- adding a link to the client-side JavaScript file -->
+    <script type="text/javascript">
+        function checkBlank() {
+            var name = document.getElementById("username").value;
+            var password = document.getElementById("passwordsignup").value;
+            var password_confirm = document.getElementById("passwordsignup_confirm").value;
+            var emailRE = /^.+@.+\..{2,4}$/;
+            if (name === " " || password === " ") {
+                alert("Please enter the correct values in the text fields.");
+            }
+            if (!password.match(password_confirm)) {
+                alert("Passwords do not match!");
+            }
+        }
+        $(function () {
+            $("#dob").datepicker();
+        });
+
+        $("#tabs_decor").css({ "color": "white" });
+
+        $(function () {
+            $('#tab').tabs();
+        });
+        
+        $( function() {
+    $( "#slider-range-max" ).slider({
+      range: "max",
+      min: 1,
+      max: 10,
+      value: 2,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+      }
+    });
+    $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+  } );
+    </script>
+   
+
+</head>
+
+<!-- Beginning of the body of the HTML page -->
+
+<body style="background-image: url(images/back.jpg);">
+    <div class="container">
+
+        <!-- Ajax Tabs -->
+
+        <div class="wrapper">
+            <div id="tab">
+                <!--<ul class="tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">-->
+                <ul style="background-color:#333232;" class="tabs ui-tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                    <li class="ui-widget ui-tabs-tab ui-state-default ui-corner-top ui-state-focus ui-tabs-selected ui-tabs-anchor ui-state-active"><a href="#tabs-1">About website</a></li>
+                    <li class="ui-widget ui-state-default ui-corner-top ui-state-focus ui-tabs-loading ui-tabs-anchor"><a href="#tabs-2">Contact Us</a></li>
+                </ul>
+                <div class="tab-content ui-tabs-panel ui-widget-content ui-corner-bottom " id="tabs-1">Workout Buddy is a web application that allows you to find a suitable buddy for your workout sessions. We
+                    also help you connect with people interested in the similar activities as you! Increase your network,
+                    make new buddies! Compete for better health!!!</div>
+                <div class="tab-content ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-2">
+                    Please write an E-mail to us with the issues and we will try to resolve them for you! Also, We welcome feedback! Thanks in
+                    advance.
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <h1> &nbsp; &nbsp; &nbsp; Workout Buddy</h1>
+
+        </header>
+
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/logo.png" class=img /></div>
+
+        <br>
+        <section>
+            <div id="container_demo">
+
+                <!-- toggling between the log in and sign up pages-->
+                <a class="hiddenanchor" id="toregister"></a>
+                <a class="hiddenanchor" id="tologin"></a>
+                <div id="wrapper">
+
+                    <!-- Log In form -->
+                    <div id="login" class="animate form">
+                        <form action="/Profile" autocomplete="on" method="post">
+                            <h1>Log in</h1>
+                            <p>
+                                <label for="username" class=""> Username or Email :</label>
+                                <input id="username" name="username" required="required" type="text" placeholder="myusername@mail.com" />
+                            </p>
+                            <p>
+                                <label for="password" class=""> Password :</label>
+                                <input id="password" name="password" required="required" type="password" placeholder="eg. WorkOUT1!" />
+                            </p>
+
+                            <!-- "Log In" button with "Forgot Password" link -->
+                            <div>
+
+                                <p class="signin button">
+                                    <input type="submit" value="Login " onclick="checkBlank()" />
+                                </p>
+                            </div>
+
+                            <!-- Alternate Sequence to Log In Usecase. 
+                                Register before trying to log in. 
+                                Link to navigate to the Sign-Up form -->
+                            <p class="change_link">
+                                Don't have a Workout Buddy yet?
+                                <a href="#toregister" class="to_register"> Join the network</a>
+                            </p>
+                        </form>
+                    </div>
+
+
+                    <!-- Sign Up/Register form -->
+                    <div id="register" class="animate form">
+                        <form action="/register" autocomplete="on" method="POST">
+                            <h1> Sign up </h1>
+                            <p>
+                                <label for="usernamesignup" class="uname">Username :</label>
+                                <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="MyUserName" />
+                            </p>
+                            <p>
+                                <label for="emailsignup" class="youmail">Email :</label>
+                                <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mymail@mail.com" />
+                            </p>
+                            <p>
+                                <label for="passwordsignup" class="youpasswd">Password :</label>
+                                <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. WorkOUT1!" />
+                            </p>
+                            <p>
+                                <label for="passwordsignup_confirm" class="youpasswd">Please confirm password :</label>
+                                <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. WorkOUT1!"
+                                />
+                            </p>
+                            <p>
+                                <label for="dateofbirth" class="dob">Date of Birth :</label>
+                                <input name="dob" required="required" type="text" id="dob" placeholder="mm/dd/yyyy">
+                            </p>
+                              <p>
+                           
+                                <label for="fitnesslevel" class="fitness">Fitness Level:</label>
+                                <input type="text" name="amount" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-range-max"></div>
+                            
+                            
+                            <p>
+                            <label for="image" class="image">image_url</label>
+                            <input id="confirm" name="confirm" required="required" type="text" placeholder="image_url"
+                                />
+                            </p>
+                            <!-- Sign Up button after filling form details -->
+                            <p class="signin button">
+                                <input type="submit" value="Sign up" onclick="checkBlank()" />
+                            </p>
+
+                            <!-- Alternate Sequence to Sign Up Usecase.
+                                User has to log in, if already registered on the site.
+                                Link to navigate to the Log In form -->
+                            <p class="change_link">
+                                Already Registered ?
+                                <a href="#tologin" class="to_register"> Log in </a>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+<footer>
+       <a href="http://www.cs.sjsu.edu/~mak/CMPE280/index.html">Checkout our tools</a>
+    </footer>
+
+    
+</body>
+
+</html>

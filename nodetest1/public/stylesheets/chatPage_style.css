@@ -1,0 +1,116 @@
+/* Common styling for the entire page */
+{
+	margin: 0;
+	padding: 0;
+	font-family: tahoma, sans-serif;
+	box-sizing: border-box;
+}
+
+/* Styling for the HTML body 
+body {
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}*/
+
+/* Attributes for styling of the chat box */
+.chatbox {
+	width: 450px;
+	height: 550px;
+	background: #fff;
+	padding: 20px;
+	margin: 15px auto; /*padding and margin attributes used to pull the chat box in the center */
+	box-shadow: 0 3px #ccc;
+}
+
+/* increase the size and width of each image to 100% . Also, adding scroll-bar to the chat box */
+.chatlogs {
+	padding: 1px;
+	width: 100%;
+	height: 450px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #eee; /* Giving a shadow of light grey color on the chat box */
+}
+
+/* Styling attributes for displaying every individual chat message */
+.chat {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	margin-bottom: 10px;
+}
+
+/* Styling for the user image appearing with the user's message */
+.chat .user-photo {
+	width: 60px;
+	height: 60px;
+	background: #ccc;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.chat .user-photo img {
+	width: 100%;
+}
+
+/* Common Styling for each message of the users */
+.chat .chat-message {
+		width: 70%;
+		padding: 15px;
+		margin: 5px 10px 0;
+		border-radius: 10px;
+		font-size: 18px;
+}
+
+/* Styling for each message from Buddies */
+.friend .chat-message {
+	/*background: #3D713D;*/
+	background: white;
+	color: black;
+}
+
+/* Styling for each message from Buddies */
+.self .chat-message {
+	background: #6E7AB7;
+	color: rgb(0,0,0);	
+	order: -1;
+}
+
+/* Styling for the text-entry field and the Send button */
+.chat-form {
+	margin-top: 20px;
+	display: flex;
+	align-items: flex-start;	
+}
+
+/*Styling in particular for the text-entry field */
+.chat-form textarea {
+	background: #fbfbfb;
+	width: 90%;
+	height: 50px;
+	border: 2px solid lightblue;
+	border-radius: 3px;
+
+	padding: 10px;
+	font-size: 10px;
+	color: #222;
+}
+
+.chat-form textarea:focus {
+	background: white;
+}
+
+/* Styling for the 'Send' button */
+.chat-form button {
+	padding: 5px 15px;
+	font-size: 25px;
+	color: #FFFFFF;
+	color: lightskyblue;
+	border: none;
+	margin: 0 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	resize: none;
+}

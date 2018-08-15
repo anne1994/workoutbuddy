@@ -1,0 +1,380 @@
+@font-face {
+    font-family: 'Raleway', sans-serif;
+}
+
+body,
+div,
+h1,
+form,
+input,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+img {
+    border: 0;
+}
+
+h1 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+header,
+section {
+    display: block;
+}
+
+body {
+    font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    background-image: url(/images/back.jpg) repeat top left;
+    font-weight: 400;
+    font-size: 15px;
+    color: #1d3c41;
+    overflow-y: scroll;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+}
+
+.container>header {
+    padding: 20px 30px 10px 30px;
+    margin: 0px 20px 10px 20px;
+    position: relative;
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container>header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    line-height: 35px;
+    position: relative;
+    color: #FFF;
+    padding: 0px 0px 5px 0px;
+    font-weight: 600;
+}
+
+.container>header h1 span {
+    color: #7cbcd6;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+body {
+    background: url(images/back.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#container_demo {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+a.hiddenanchor {
+    display: none;
+}
+
+
+/** The wrapper that will contain our two forms **/
+
+#wrapper {
+    width: 60%;
+    right: 0px;
+    min-height: 560px;
+    margin: 0px auto;
+    width: 500px;
+    position: relative;
+}
+
+
+/**** general text styling ****/
+
+#wrapper a {
+    color: rgb(95, 155, 198);
+    text-decoration: underline;
+}
+
+#wrapper h1 {
+    font-size: 48px;
+    color: rgb(6, 106, 117);
+    padding: 2px 0 10px 0;
+    font-family: 'FranchiseRegular', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+/** For the moment only webkit supports the background-clip:text; */
+
+#wrapper h1 {
+    background: repeating-linear-gradient(-45deg, rgb(18, 83, 93), rgb(18, 83, 93) 20px, rgb(64, 111, 118) 20px, rgb(64, 111, 118) 40px, rgb(18, 83, 93) 40px);
+    -webkit-background-clip: text;
+}
+
+#wrapper h1:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+}
+
+#wrapper p {
+    margin-bottom: 15px;
+}
+
+#wrapper p:first-child {
+    margin: 0px;
+}
+
+#wrapper label {
+    color: black;
+    position: relative;
+}
+
+
+/* placeholder */
+
+::-webkit-input-placeholder {
+    color: rgb(190, 188, 188);
+    font-style: italic;
+}
+
+input {
+    color: rgb(3, 3, 3);
+    font-style: italic;
+    outline: none;
+}
+
+
+/* all the input */
+
+#wrapper input {
+    width: 92%;
+    margin-top: 4px;
+    padding: 10px 5px 10px 32px;
+    border: 1px solid rgb(178, 178, 178);
+    box-sizing: content-box;
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6);
+    transition: all 0.2s linear;
+}
+
+#wrapper input:active,
+#wrapper input:focus {
+    border: 1px solid rgba(91, 90, 90, 0.7);
+    background: rgba(238, 236, 240, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+}
+
+
+/*styling both submit and log in buttons */
+
+#wrapper p.button input {
+    width: 30%;
+    cursor: pointer;
+    background: rgb(61, 157, 179);
+    padding: 8px 5px;
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    font-size: 24px;
+    border: 1px solid rgb(28, 108, 122);
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    transition: all 0.2s linear;
+}
+
+p.login.button,
+p.signin.button {
+    text-align: right;
+    margin: 5px 0;
+}
+
+
+/*styling the links to change from one form to another */
+
+p.change_link {
+    position: absolute;
+    color: rgb(127, 124, 124);
+    left: 0px;
+    height: 20px;
+    width: 438px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    text-align: right;
+    border-top: 1px solid rgb(219, 229, 232);
+    border-radius: 0 0 5px 5px;
+    background: rgb(225, 234, 235);
+}
+
+
+/** Styling both forms **/
+
+#register,
+#login {
+    position: absolute;
+    top: 0px;
+    width: 88%;
+    padding: 18px 6% 60px 6%;
+    margin: 0 35px;
+    background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189, 0.8);
+    box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    border-radius: 5px;
+}
+
+#register {
+    z-index: 21;
+    opacity: 0;
+}
+
+#login {
+    z-index: 22;
+}
+
+#toregister:target~#wrapper #register,
+#tologin:target~#wrapper #login {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.36);
+    z-index: 22;
+    animation-name: fadeInLeft;
+    animation-delay: .1s;
+}
+
+#toregister:target~#wrapper #login,
+#tologin:target~#wrapper #register {
+    animation-name: fadeOutLeft;
+}
+
+
+/** the actual animation where the Log In page and Sign Up pages fade in and out based on selection.
+ Referred from the following website - http://daneden.me/animate/ ***/
+
+.animate {
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lightgrey;
+}
+
+.tab-content {
+    background-color: lightsalmon;
+    font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    font-size: 18px;
+    color: blue;
+}
+
+.ui-tabs-hide {
+	display: none;
+}

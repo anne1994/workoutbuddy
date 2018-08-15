@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+        <html lang="en-US">
+    
+        <head>
+            <meta charset="utf-8">
+            <title>
+                Chat Page
+            </title>
+    
+            <!-- Adding a link to the CSS style sheet -->
+            <link rel="stylesheet" type="text/css" href="css/chatPage_style.css">
+            <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"
+            />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    
+            <script type="text/javascript" src="chatPage.js"></script>
+            <script type="text/javascript" src="login-response.js"></script>
+    
+            <!-- Adding style to chatPage using jQuery and CSS -->
+            <script>
+                $(document).ready(function () {
+                    $("body").css("background-image", "url(images/back.jpg)");
+                    $("#send").css({ "background-color": "#3D713D", "box-shadow": "0 3px 0 #015832" });
+                });
+            </script>
+    
+        </head>
+    
+        <body>
+            <!-- Creating a division for encapsulating the entire chat box -->
+            <div class="chatbox">
+    
+                <!-- Division within the chatbox to divide the message display and the text-entry fields -->
+                <div class="chatlogs">
+    
+                    <!-- Creating a division for each chat message. 
+                        Message is hard-coded strings for now.
+                        We will be making the application accept dynamically types values for messages -->
+                    <div class="chat friend">
+                        <div class="user-photo"> <img src="images/user1.png"> </div>
+                        <p class="chat-message">Hey Buddy!</p>
+                    </div>
+    
+                    <div class="chat self">
+                        <div class="user-photo"> <img src="images/user2.jpg"> </div>
+                        <p class="chat-message">Hey!</p>
+                    </div>
+    
+                    <div class="chat friend">
+                        <div class="user-photo"> <img src="images/user1.png"> </div>
+                        <p class="chat-message">Do you want to go for a run?</p>
+                    </div>
+    
+                    <div class="chat self">
+                        <div class="user-photo"> <img src="images/user2.jpg"> </div>
+                        <p class="chat-message">Sure. Meet me at the park!</p>
+                    </div>
+                </div>
+    
+                <!-- Creating a text box and a Send button to type and submit the message -->
+                <div class="chat-form">
+                    <textarea id="text"> </textarea>
+                    <button id="send" onclick="submit()">Send</button>
+                </div>
+            </div>
+    
+        </body>
+    
+        </html>

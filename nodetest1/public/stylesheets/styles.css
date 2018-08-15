@@ -1,0 +1,8 @@
+body {
+ padding-top: 60px;   
+}
+
+.highlight { 
+    border: solid 1px #555;
+    background: pink;
+}

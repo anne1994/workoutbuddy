@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    h1= title
+  
+   
+   
+    form#formAddUser(name="updatelist",method="post",action="/updatelist")
+    
+
+        &nbsp;
+        &nbsp;
+        &nbsp; 
+        &nbsp; 
+        &nbsp;
+        div
+        label UserEmail
+        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+        
+        div 
+        label New_Username
+        input#inputUsernametoEdit(type="text", placeholder="username", name= "username")
+        
+        div 
+        label New_password
+        input#inputPasswordtoEdit(type="password", placeholder="****", name= "password")
+        
+        div
+        label New_fitness_level
+        input#inputfitnessleveltoEdit(type="number", placeholder="0", name= "fitnesslevel")
+        
+        div
+        label New_dob
+        input#inputdobtoEdit(type="text", placeholder="mm/dd/yyyy", name= "dob")
+        
+        div
+        label New_image_url
+        input#inputimagetoEdit(type="text", placeholder=".jpg", name= "confirm")
+        div
+        button#btnSubmit(type="submit") submit
